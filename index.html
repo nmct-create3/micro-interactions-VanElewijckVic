@@ -17,6 +17,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/screen.css">        
+
+        <script src="script/app.js"></script>
     </head>
     <body>
         <section class="o-row o-row--lg o-row--login">
@@ -33,17 +35,23 @@
                         <h2 class="c-card__title">
                             Sign in to your account
                         </h2>
-                        <p class="c-form-field">
+                        <p class="js-email-field c-form-field">
                             <label class="c-label" for="username">
-                                Email address                                
+                                Email address   
+                                <span class="c-label__error-message js-email-error-message">
+                                    This field is required.
+                                </span>                             
                             </label>
-                            <input class="c-input" type="email" name="username" id="username" placeholder="e.g. john@doe.com" required>
+                            <input class="js-email-input c-input" type="email" name="username" id="username" placeholder="e.g. john@doe.com" required>
                         </p>
-                        <p class="c-form-field">
+                        <p class="js-password-field c-form-field">
                             <label class="c-label" for="password">
+                                <span class="c-label__error-message js-password-error-message">
+                                    This field is required.
+                                </span>
 								Password								
                             </label>                            
-                            <input class="c-input" type="password" name="password" id="password" required>
+                            <input class="js-password-input c-input" type="password" name="password" id="password" required>
                         </p>
                         <!-- Custom checkbox -->
                         <p class="c-form-field c-form-field--option">
@@ -59,7 +67,7 @@
                         </p>
                         <p class="u-mb-md">
                             <!-- Button -->
-                            <button class="o-button-reset c-button js-sign-in-button">Sign in</button>
+                            <button class="js-sign-in o-button-reset c-button js-sign-in-button">Sign in</button>
                         </p>
                         <p class="u-text-sm u-align-text-center">
                             <a href="#!">
